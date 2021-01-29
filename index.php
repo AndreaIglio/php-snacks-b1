@@ -12,7 +12,6 @@ Olimpia Milano - Cantù | 55 - 60
 
 */
 
-
 $matches = [
 
     "Giornata 1" => [
@@ -53,22 +52,6 @@ $matches = [
             ];
 // var_dump($matches);
 
-for ($i = 0; $i <count($matches) + 1; $i++){
-    var_dump($i);
-    foreach($matches["Giornata $i"] as $value){
-        
-        var_dump($value["Home"]["name"]); // Home Team name
-        var_dump($value["Home"]["points"]); // Home Team name
-        var_dump($value["Away"]["name"]); // Away Team name
-        var_dump($value["Away"]["points"]); // points Team name
-
-
-
-    }
-    
-}
-
-
 /*
 PHP Snack 2:
 Passare come parametri GET name, mail e age e verificare (cercando i metodi che non
@@ -95,6 +78,21 @@ Se tutto è ok stampare “Accesso riuscito”, altrimenti “Accesso negato”
 </head>
 <body>
     
+    
+    <?php
+    
+    foreach($matches as $gameday){
+    // var_dump($gameday);
+
+    foreach ($gameday as $match)  { ?>
+      <h2><?php echo $match["Home"]["name"] . " - " . $match["Away"]["name"] . " | " . $match["Home"]["points"] . " - " . $match["Away"]["points"]  ?></h2>  
+          
+    <?php }
+   }
+
+    ?>
+
+
 </body>
 </html>
 
