@@ -9,6 +9,60 @@ PHP Snack 1:
 Creiamo un array 'matches' contenente altri array i quali rappresentano delle partite di basket di un’ipotetica tappa del calendario. Ogni array della partita avrà una squadra di casa e una squadra ospite, punti fatti dalla squadra di casa e punti fatti dalla squadra ospite.
 Stampiamo a schermo tutte le partite con questo schema:
 Olimpia Milano - Cantù | 55 - 60
+
+*/
+
+
+$matches = [
+
+    "Giornata 1" => [
+        "Game 1" => [
+            "Home" => [
+                "name" => "Sassari",
+                "points" => 69,
+            ],
+            "Away" => [
+                "name" => "Brindisi",
+                "points" => 71,
+            ],
+
+            ],
+        "Game 2" => [
+            "Home" => [
+                "name" => "Fortitudo Bologna",
+                "points" => 69,
+            ],
+            "Away" => [
+                "name" => "Reyer Venezia",
+                "points" => 71,
+            ],
+            ],
+            ],
+    "Giornata 2" => [
+        "Game 1" => [
+            "Home" => [
+                "name" => "Reggio Emilia",
+                "points" => 65,
+            ],
+            "Away" => [
+                "name " => "Scafati",
+                "points" => 59,
+            ],
+]
+    ],
+            ];
+// var_dump($matches);
+
+for ($i = 0; $i <count($matches) + 1; $i++){
+    // var_dump($matches["Giornata $i"]);
+    foreach($matches["Giornata $i"] as $value){
+        var_dump($value["Home"]["name"]); // 
+    }
+    
+}
+
+
+/*
 PHP Snack 2:
 Passare come parametri GET name, mail e age e verificare (cercando i metodi che non
 conosciamo nella documentazione) che:
@@ -17,18 +71,7 @@ conosciamo nella documentazione) che:
 3. age sia un numero.
 Se tutto è ok stampare “Accesso riuscito”, altrimenti “Accesso negato”
 
-
-
-
 */
-
-
-
-
-
-
-
-
 
 
 
