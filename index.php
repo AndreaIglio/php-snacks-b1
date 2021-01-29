@@ -40,17 +40,21 @@ $matches = [
     "Giornata 2" => [
         "Game 1" => [
             "Home" => [
-                "name" => "Reggio Emilia",
+                "name" => "Brindisi",
                 "points" => 65,
             ],
             "Away" => [
-                "name" => "Scafati",
+                "name" => "Fortitudo Bologna",
                 "points" => 61,
             ],
 ]
     ],
             ];
 // var_dump($matches);
+
+
+
+
 
 /*
 PHP Snack 2:
@@ -78,25 +82,26 @@ Se tutto è ok stampare “Accesso riuscito”, altrimenti “Accesso negato”
 </head>
 <body>
     
+<?php 
+
+for ($i = 1; $i <count($matches) + 1; $i++){ ?>
+
+    <h1><?php  echo "Giornata $i"  ?></h1>
+
+<?php
+    foreach($matches["Giornata $i"] as $match){ ?>
+
+     <h1><?php echo $match["Home"]["name"] . " - " . $match["Away"]["name"] . " | " . $match["Home"]["points"] . " - " . $match["Away"]["points"]  ?></h1>    
+       
+
+   <?php  }
     
-    <?php
+}
+
+?>
     
-    foreach($matches as $gameday){
-    // var_dump($gameday);
 
-    foreach ($gameday as $match)  { ?>
-      <h2><?php echo $match["Home"]["name"] . " - " . $match["Away"]["name"] . " | " . $match["Home"]["points"] . " - " . $match["Away"]["points"]  ?></h2>  
-          
-    <?php }
-   }
-
-    ?>
-
-
+    
+ 
 </body>
 </html>
-
-
-
-
-
