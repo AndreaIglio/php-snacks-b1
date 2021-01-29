@@ -45,8 +45,8 @@ $matches = [
                 "points" => 65,
             ],
             "Away" => [
-                "name " => "Scafati",
-                "points" => 59,
+                "name" => "Scafati",
+                "points" => 61,
             ],
 ]
     ],
@@ -54,9 +54,16 @@ $matches = [
 // var_dump($matches);
 
 for ($i = 0; $i <count($matches) + 1; $i++){
-    // var_dump($matches["Giornata $i"]);
+    var_dump($i);
     foreach($matches["Giornata $i"] as $value){
-        var_dump($value["Home"]["name"]); // 
+        
+        var_dump($value["Home"]["name"]); // Home Team name
+        var_dump($value["Home"]["points"]); // Home Team name
+        var_dump($value["Away"]["name"]); // Away Team name
+        var_dump($value["Away"]["points"]); // points Team name
+
+
+
     }
     
 }
