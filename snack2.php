@@ -16,10 +16,10 @@ $age = $_GET['age'];
 
 
 if(strlen($name)> 3 && strpos($email, "@") && strpos($email, ".") && (is_numeric($age)) ){
-    var_dump('You can access');
+   echo ('You can access');
 }
 else {
-    var_dump('You cannot access');
+echo ('You cannot access');
 }
 
 
